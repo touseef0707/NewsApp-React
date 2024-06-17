@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# NewsWeb Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NewsWeb is a responsive web application that fetches and displays the latest news articles using the NewsAPI. The application is built with React and features infinite scrolling, category-based filtering, and dark/light mode toggle.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Infinite Scrolling**: Automatically load more news articles as you scroll down.
+- **Category Filtering**: View news articles by categories such as Business, Entertainment, Health, Science, Sports, and Technology.
+- **Dark/Light Mode**: Toggle between dark and light themes for better readability.
+- **Responsive Design**: Optimized for various screen sizes including desktops, tablets, and mobile devices.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get started with the NewsWeb application, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/touseef0707/NewsWeb.git
+    ```
 
-### `npm test`
+2. **Navigate to the project directory**:
+    ```sh
+    cd NewsWeb
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Install dependencies**:
+    ```sh
+    npm install
+    ```
 
-### `npm run build`
+4. **Set up your NewsAPI key**:
+    - Create a `.env` file in the root of your project.
+    - Add your NewsAPI key to the `.env` file:
+      ```plaintext
+      REACT_APP_NEWS_API=your_news_api_key
+      ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. **Start the development server**:
+    ```sh
+    npm start
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. **Open your browser**:
+    - Visit `http://localhost:3000` to view the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+### Changing the Default Settings
+- **Default Country**: To change the default country from 'in' (India) to another country, modify the `defaultProps` in the `News` component.
+- **Default Page Size**: Modify the `pageSize` state in the `App` component to change the number of articles per page.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Available Routes
+- `/` or `/NewsWeb` - General news
+- `/business` - Business news
+- `/entertainment` - Entertainment news
+- `/general` - General news
+- `/health` - Health news
+- `/science` - Science news
+- `/sports` - Sports news
+- `/technology` - Technology news
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `App`
+The main component that sets up routing and the theme for the application.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `Navbar`
+The navigation bar component that includes the dark/light mode toggle.
 
-## Learn More
+### `News`
+The component responsible for fetching and displaying news articles based on the selected category.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `NewsItem`
+The component that displays an individual news article.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `Spinner`
+The loading spinner component shown while fetching news articles.
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions are welcome! To contribute to this project:
 
-### Analyzing the Bundle Size
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgements
 
-### Advanced Configuration
+- [NewsAPI](https://newsapi.org/) for providing the news data.
+- [React](https://reactjs.org/) for the powerful UI library.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
